@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #e5e5e5 !important;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+a,
+button {
+    text-decoration: none !important;
+    color: #0176c4;
+}
+
+.nav-bar {
+    display: flex;
+    padding: 10px;
+    gap: 200px;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.MD-div {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #ff6767;
+    color: white;
+}
+
+.doctor-profile {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid grey;
+    border-radius: 5px 5px 0px 0px;
+    height: 150px;
+    margin: auto;
+    padding: 20px 40px;
+    gap: 50px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+}
+
+.profile-info * {
+    margin: 0px;
+    padding: 0px;
+}
+
+.profile-name {
+    font-weight: 500;
+}
+
+.specialty {
+    font-size: 12px;
+}
+
+.profile-info button {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #0176c4;
+    padding: 5px;
+    color: #0176c4;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.help-div {
+    padding: 50px;
+    background-color: #ddf198;
+}
+
+.faq {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#accordion .card {
+    border-radius: 0%;
+    width: 75%;
+    margin: 10px auto;
+}
+
+#accordion .card-header {
+    margin: 0px;
+    padding: 0px;
+}
+
+#accordion div div h5 button {
+    color: #8b8080;
+    margin: auto;
+    display: flex;
+    /* border: 1px solid black; */
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
