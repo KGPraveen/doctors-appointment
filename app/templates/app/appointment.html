@@ -1,3 +1,96 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}EXTENDS{% endblock title %}
+
+{% block content %}
+
+<div class="apppointment-div">
+  <div>
+    <p style="font-weight: bold;">Book Appointment</p>
+    <p>Select Your Consultation Type</p>
+    <p style="color: #64bc6e;">Fees approx ₹ 500</p>
+    <p style="color: #715ac4;">(pay at clinic)</p>
+  </div>
+
+  <div class="appointment-icon-div">
+    <div class="in-clinic">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-add-fill"
+        viewBox="0 0 16 16">
+        <path
+          d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 1 1-1 0v-1h-1a.5.5 0 1 1 0-1h1v-1a.5.5 0 0 1 1 0" />
+        <path
+          d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+        <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+      </svg>
+      In Clinic
+    </div>
+    <div>
+      <svg style="background-color: rgb(207, 207, 207);" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+        fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+      </svg>
+      Audio
+    </div>
+    <div>
+      <svg style="background-color: rgb(207, 207, 207);" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+        fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2z" />
+      </svg>
+      Video
+    </div>
+  </div>
+</div>
+
+
+<div class="clinic-container">
+  <p>Clinic Name</p>
+  <ul>
+    <li>
+      Manik Dalvi's Clinic, Kalyan Naka, Rk Business Centre, Opp. Bopal Nagar, Maharashtra, 421302</li>
+  </ul>
+</div>
+
+
+<div class="slots-container">
+  <div class="slot available">
+    <p class="date">Today</p>
+    <p class="availability">
+      <span id="slots-available">8</span> slots available.
+    </p>
+  </div>
+  <div class="slot no-slots">
+    <p class="date">Tomorrow</p>
+    <p class="availability">No slot available.</p>
+  </div>
+  <div class="slot no-slots">
+    <p class="date no-slots">Day after Tomorrow</p>
+    <p class="availability">No slot available.</p>
+  </div>
+</div>
+
+
+<div class="slot-table-container">
+  <div class="slot-table">
+    <button class="slot-button" onclick="slotSelected(1)">10:00AM</button>
+    <button class="slot-button" onclick="slotSelected(2)">10:15AM</button>
+    <button class="slot-button" onclick="slotSelected(3)">10:30AM</button>
+    <button class="slot-button" onclick="slotSelected(4)">10:45AM</button>
+    <button class="slot-button" onclick="slotSelected(5)">11:00AM</button>
+    <button class="slot-button" onclick="slotSelected(6)">11:15AM</button>
+    <button class="slot-button" onclick="slotSelected(7)">11:30AM</button>
+    <button class="slot-button" onclick="slotSelected(8)">11:45AM</button>
+  </div>
+
+  <a href="https://remedoapp.com/rweb/doctors/drmanikdalvi?param=bookings">
+    <button class="continue-btn" disabled>Continue</button>
+  </a>
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'app/scripts.js' %}"></script>
+{% endblock scripts %}
